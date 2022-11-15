@@ -12,5 +12,5 @@
 <pre><code>npm start</code></pre>
 5. 成功後會自動開啟網站，或點擊
    http://localhost:3000 進入頁面。
-
-<br>
+6. 首頁提供前往 Todo List 連結，亦可以 http://localhost:3000/todo 進入作業頁面
+   <br>
