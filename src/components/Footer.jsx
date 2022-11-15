@@ -31,10 +31,10 @@ const StyledButton = styled.button`
   }
 `;
 
-const Footer = ({ todoLength }) => {
+const Footer = ({ todosLength }) => {
   return (
     <StyledFooter>
-      <p>剩餘項目數： {todoLength}</p>
+      <p>剩餘項目數： {todosLength}</p>
       <StyledButton>登出</StyledButton>
     </StyledFooter>
   );

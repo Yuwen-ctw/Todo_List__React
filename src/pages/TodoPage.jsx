@@ -67,6 +67,14 @@ const TodoPage = () => {
       });
     });
   };
+
+  const handleDetele = (todoId) => {
+    setTodos((prevTodos) => {
+      return prevTodos.filter((todo) => {
+        return todo.id !== todoId;
+      });
+    });
+  };
   return (
     <div>
       TodoPage
@@ -81,8 +89,9 @@ const TodoPage = () => {
         onToggleDone={handleToggleDone}
         onChangeMode={handleChangeMode}
         onSave={handleOnSave}
+        onDelete={handleDetele}
       />
-      <Footer todoLength={0} />
+      <Footer todosLength={todos.length} />
     </div>
   );
 };

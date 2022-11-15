@@ -17,6 +17,7 @@ const TodoCollection = ({
             onToggleDone={onToggleDone}
             onChangeMode={onChangeMode}
             onSave={onSave}
+            onDelete={onDelete}
           />
         );
       })}
