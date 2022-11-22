@@ -1,8 +1,8 @@
 import { Footer, Header, TodoCollection, TodoInput } from 'components';
 import { useState, useEffect } from 'react';
 import { getTodos, createTodo, patchTodo, deleteTodo } from '../api/todos';
-import { checkPermission } from 'api/auth';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from 'context/AuthContext';
 const dummyTodos = [
   {
     title: 'Learn react-router',
@@ -29,20 +29,12 @@ const dummyTodos = [
 const TodoPage = () => {
   const [inputValue, setInputValue] = useState('');
   const [todos, setTodos] = useState(dummyTodos);
+  const { isAuthenticated, currentMember } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
-    async function checkTokenIsValid() {
-      const authToken = localStorage.getItem('authToken');
-      if (!authToken) return navigate('/login');
-
-      const result = await checkPermission(authToken);
-      if (!result) navigate('/login');
-
-      return;
-    }
-    checkTokenIsValid();
-  }, [navigate]);
+    if (!isAuthenticated) return navigate('/login');
+  }, [navigate, isAuthenticated]);
 
   useEffect(() => {
     const getTodosAsync = async () => {
@@ -117,7 +109,7 @@ const TodoPage = () => {
   return (
     <div>
       TodoPage
-      <Header userName={''} />
+      <Header userName={currentMember?.name} />
       <TodoInput
         inputValue={inputValue}
         onChange={handleInputChange}

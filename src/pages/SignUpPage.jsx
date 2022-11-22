@@ -8,58 +8,46 @@ import { ACLogoIcon } from 'assets/images';
 import { AuthInput } from 'components';
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { signup, checkPermission } from 'api/auth';
+import { useAuth } from 'context/AuthContext';
 import Swal from 'sweetalert2';
 
 const SignUpPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
+  const { isAuthenticated, register } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
-    async function checkTokenIsValid() {
-      const authToken = localStorage.getItem('authToken');
-      if (!authToken) return;
-      const result = await checkPermission(authToken);
-      if (result) navigate('/todos');
-      return;
-    }
-    checkTokenIsValid();
-  }, [navigate]);
+    if (isAuthenticated) return navigate('/todos');
+  }, [navigate, isAuthenticated]);
 
   async function handleSignup(username, password, email) {
     if (username.length === 0) return;
     if (password.length === 0) return;
     if (email.length === 0) return;
-    try {
-      const { success, authToken } = await signup({
-        username,
-        password,
-        email,
-      });
-      if (success) {
-        localStorage.setItem('authToken', authToken);
-        Swal.fire({
-          position: 'top',
-          icon: 'success',
-          title: '註冊成功',
-          showConfirmButton: false,
-          timer: 1000,
-        });
-        navigate('/todos');
-        return;
-      }
+    const success = await register({
+      username,
+      password,
+      email,
+    });
+    if (success) {
       Swal.fire({
         position: 'top',
-        icon: 'error',
-        title: '註冊失敗',
+        icon: 'success',
+        title: '註冊成功',
         showConfirmButton: false,
         timer: 1000,
       });
-    } catch (error) {
-      console.error(error);
+      return;
     }
+    Swal.fire({
+      position: 'top',
+      icon: 'error',
+      title: '註冊失敗',
+      showConfirmButton: false,
+      timer: 1000,
+    });
   }
   return (
     <AuthContainer>
