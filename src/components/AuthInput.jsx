@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledContainer = styled.div`
+const StyledContainer = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -31,6 +31,7 @@ const AuthInput = ({ label, type, placeholder, value, onChange }) => {
         placeholder={placeholder || ''}
         value={value || ''}
         onChange={(e) => onChange?.(e.target.value)}
+        autoComplete="off"
       />
     </StyledContainer>
   );
