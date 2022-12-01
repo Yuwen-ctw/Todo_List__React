@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/Todo_List__React/static/css/main.3ad1a347.chunk.css",
-    "main.js": "/Todo_List__React/static/js/main.adf2db27.chunk.js",
-    "main.js.map": "/Todo_List__React/static/js/main.adf2db27.chunk.js.map",
+    "main.css": "/Todo_List__React/static/css/main.8a192b7b.chunk.css",
+    "main.js": "/Todo_List__React/static/js/main.59a4cf07.chunk.js",
+    "main.js.map": "/Todo_List__React/static/js/main.59a4cf07.chunk.js.map",
     "runtime-main.js": "/Todo_List__React/static/js/runtime-main.66f8027a.js",
     "runtime-main.js.map": "/Todo_List__React/static/js/runtime-main.66f8027a.js.map",
-    "static/js/2.ebfdce5a.chunk.js": "/Todo_List__React/static/js/2.ebfdce5a.chunk.js",
-    "static/js/2.ebfdce5a.chunk.js.map": "/Todo_List__React/static/js/2.ebfdce5a.chunk.js.map",
+    "static/js/2.65fa1444.chunk.js": "/Todo_List__React/static/js/2.65fa1444.chunk.js",
+    "static/js/2.65fa1444.chunk.js.map": "/Todo_List__React/static/js/2.65fa1444.chunk.js.map",
     "static/js/3.a29260c9.chunk.js": "/Todo_List__React/static/js/3.a29260c9.chunk.js",
     "static/js/3.a29260c9.chunk.js.map": "/Todo_List__React/static/js/3.a29260c9.chunk.js.map",
     "index.html": "/Todo_List__React/index.html",
-    "static/css/main.3ad1a347.chunk.css.map": "/Todo_List__React/static/css/main.3ad1a347.chunk.css.map",
-    "static/js/2.ebfdce5a.chunk.js.LICENSE.txt": "/Todo_List__React/static/js/2.ebfdce5a.chunk.js.LICENSE.txt",
-    "static/media/ac-logo.eea79863.svg": "/Todo_List__React/static/media/ac-logo.eea79863.svg",
-    "static/media/check-active.680985db.svg": "/Todo_List__React/static/media/check-active.680985db.svg",
-    "static/media/check-circle.ad8591fd.svg": "/Todo_List__React/static/media/check-circle.ad8591fd.svg",
-    "static/media/check-hover.f1b1bcfd.svg": "/Todo_List__React/static/media/check-hover.f1b1bcfd.svg"
+    "static/css/main.8a192b7b.chunk.css.map": "/Todo_List__React/static/css/main.8a192b7b.chunk.css.map",
+    "static/js/2.65fa1444.chunk.js.LICENSE.txt": "/Todo_List__React/static/js/2.65fa1444.chunk.js.LICENSE.txt",
+    "static/media/ac-logo.f4e0f3cb.svg": "/Todo_List__React/static/media/ac-logo.f4e0f3cb.svg",
+    "static/media/check-active.95ca055c.svg": "/Todo_List__React/static/media/check-active.95ca055c.svg",
+    "static/media/check-circle.30720b46.svg": "/Todo_List__React/static/media/check-circle.30720b46.svg",
+    "static/media/check-hover.5e00062b.svg": "/Todo_List__React/static/media/check-hover.5e00062b.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.66f8027a.js",
-    "static/js/2.ebfdce5a.chunk.js",
-    "static/css/main.3ad1a347.chunk.css",
-    "static/js/main.adf2db27.chunk.js"
+    "static/js/2.65fa1444.chunk.js",
+    "static/css/main.8a192b7b.chunk.css",
+    "static/js/main.59a4cf07.chunk.js"
   ]
 }
